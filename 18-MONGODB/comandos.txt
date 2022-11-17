@@ -1,0 +1,64 @@
+use prueba
+
+
+const selecciones = [{ country: 'Qatar', group: 'A', continent: 'Asia', worldCups: '0' }, { country: 'Ecuador', group: 'A', continent: 'America', worldCups: '0' }, { country: 'Senegal', group: 'A', continent: 'Africa', worldCups: '0' }, { country: 'Holanda', group: 'A', continent: 'Europa', worldCups: '0' },
+{ country: 'Inglaterra', group: 'B', continent: 'Europa', worldCups: '1' }, { country: 'USA', group: 'B', continent: 'America', worldCups: '0' }, { country: 'Iran', group: 'B', continent: 'Asia', worldCups: '0' }, { country: 'Gales', group: 'B', continent: 'Europa', worldCups: '0' },
+{ country: 'Argentina', group: 'C', continent: 'America', worldCups: '2' }, { country: 'Arabia Saudita', group: 'C', continent: 'Asia', worldCups: '0' }, { country: 'Mexico', group: 'C', continent: 'America', worldCups: '0' }, { country: 'Polonia', group: 'C', continent: 'Europa', worldCups: '0' },
+{ country: 'Francia', group: 'D', continent: 'Europa', worldCups: '2' }, { country: 'Australia', group: 'D', continent: 'Oceania', worldCups: '0' }, { country: 'Dinamarca', group: 'D', continent: 'Europa', worldCups: '0' }, { country: 'Tunez', group: 'D', continent: 'Africa', worldCups: '0' },
+{ country: 'España', group: 'E', continent: 'Europa', worldCups: '1' }, { country: 'Costa Rica', group: 'E', continent: 'America', worldCups: '0' }, { country: 'Alemania', group: 'E', continent: 'Europa', worldCups: '4' }, { country: 'Japon', group: 'E', continent: 'Asia', worldCups: '0' },
+{ country: 'Belgica', group: 'F', continent: 'Europa', worldCups: '0' }, { country: 'Canada', group: 'F', continent: 'America', worldCups: '0' }, { country: 'Marruecos', group: 'F', continent: 'Africa', worldCups: '0' }, { country: 'Croacia', group: 'F', continent: 'Europa', worldCups: '0' },
+{ country: 'Brasil', group: 'G', continent: 'America', worldCups: '5' }, { country: 'Serbia', group: 'G', continent: 'Europa', worldCups: '0' }, { country: 'Suiza', group: 'G', continent: 'Europa', worldCups: '0' }, { country: 'Camerun', group: 'G', continent: 'Africa', worldCups: '0' },
+{ country: 'Portugal', group: 'H', continent: 'Europa', worldCups: '0' }, { country: 'Ghana', group: 'H', continent: 'Africa', worldCups: '0' }, { country: 'Uruguay', group: 'H', continent: 'America', worldCups: '2' }, { country: 'Corea del Sur', group: 'H', continent: 'Asia', worldCups: '0' }]
+
+
+db.createCollection('mundial2022')
+
+db.mundial2022.insert(selecciones)
+
+db.mundial2022.find().pretty()
+
+db.mundial2022.findOne({country: 'Argentina'})
+
+db.mundial2022.findOne({group: 'A', continent: 'America'})
+
+db.mundial2022.deleteOne({country: 'Brasil'})
+
+db.mundial2022.find().countDocuments()
+
+db.mundial2022.find().limit(10)
+
+db.mundial2022.estimatedDocumentCount()
+
+db.mundial2022.find({worldCups: {$gt: '1'}})
+
+db.mundial2022.find({worldCups: {$gte: '1'}})
+
+db.mundial2022.find({continent: {$in: ['America', 'Europa']}})
+
+db.mundial2022.find({worldCups: {$ne: '0'}})
+
+db.mundial2022.find({captain: {$exists: true}})
+
+db.mundial2022.find({years: {$size: 2}})
+
+db.mundial2022.find({$or: [{worldCups: '1'}, {worldCups: '2'}]})
+
+db.mundial2022.find({$and: [{worldCups: '1'}, {continent: 'America'}]})
+
+db.mundial2022.find({country: /^Arg/})
+
+db.mundial2022.find({}, {country: true})
+
+db.mundial2022.find({}).sort({country: 1})
+
+db.mundial2022.find({}).skip(0).limit(4)
+
+db.mundial2022.find({}).skip(4).limit(4)
+
+db.mundial2022.find({}).skip(8).limit(4)
+
+db.mundial2022.update({_id: ObjectId('3sd2f1ds32f1')}, {worldCups: '1'})
+
+db.createUser({user: 'coderhouse', pwd: '1234', roles: [{role: 'userAdminAnyDatabase', db: 'admin'}, {role: 'readWriteAnyDatabase', db: 'admin'}]})
+
+mongo -u coderhouse -p –-authenticationDatabase admin
