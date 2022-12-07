@@ -1,0 +1,4 @@
+REDIS_URL=redis-xxxxxxxxxxxxxxxxx.redislabs.com
+REDIS_PORT=18594
+REDIS_PSW=xxxxxxxxxxxxxxxxxxxxxxxxxx
+SECRET=secretString
