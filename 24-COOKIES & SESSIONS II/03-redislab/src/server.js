@@ -19,6 +19,7 @@ const StoreOptions = {
   secret: config.SECRET,
   resave: false,
   saveUninitialized: false,
+  ttl: 1000000,
   cookie: {
     maxAge: 10000,
   }

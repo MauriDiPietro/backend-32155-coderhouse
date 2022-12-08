@@ -10,7 +10,6 @@ const RedisStore = connectRedis(session);
 const redisClient = redis.createClient({
   host: 'localhost',  //o 127.0.0.1
   port: 6379,
-  password: 'R3d1sC$ch3',
 });
 
 const ttlSeconds = 180;
