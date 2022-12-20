@@ -1,0 +1,17 @@
+{
+  "name": "03-ejemplo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start:ej1": "node src/ejemplo-argv.js + 4 5",
+    "start:ej2": "node src/ejemplo-minimist.js --op=* --n1=4 --n2=5"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "minimist": "^1.2.6"
+  }
+}

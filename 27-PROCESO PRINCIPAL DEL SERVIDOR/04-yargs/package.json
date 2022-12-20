@@ -1,0 +1,17 @@
+{
+  "name": "04-yargs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/ej2.js",
+  "type": "module",
+  "scripts": {
+    "test1": "node ./src/ej1.js --modo=produccion --puerto=8080",
+    "test2": "node ./src/ej1.js --modo produccion --puerto 8080"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "yargs": "^17.6.2"
+  }
+}
