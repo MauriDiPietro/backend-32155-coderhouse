@@ -1,0 +1,17 @@
+{
+  "name": "pm2ecosystem",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "prod": "pm2 start ecosystem.config.js",
+    "stop:all": "pm2 stop all",
+    "delete:all": "pm2 detele all",
+    "dev": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

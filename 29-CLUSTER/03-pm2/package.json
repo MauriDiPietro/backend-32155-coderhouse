@@ -1,0 +1,22 @@
+{
+  "name": "pm2example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "prod:fork": "pm2 start src/index.js --watch --name=EjemploPm2Fork",
+    "prod:cluster": "pm2 start src/index.js --watch -i max --name=EjemploPm2Cluster",
+    "stop:all": "pm2 stop all",
+    "delete:all": "pm2 detele all",
+    "dev": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
