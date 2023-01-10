@@ -1,0 +1,17 @@
+{
+  "name": "03-ejemplo-proyecto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "log4js": "^6.5.2"
+  }
+}
