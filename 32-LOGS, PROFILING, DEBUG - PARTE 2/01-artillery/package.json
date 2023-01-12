@@ -1,0 +1,20 @@
+{
+  "name": "ejemplo-artillery",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start:fork": "node src/index.js --puerto=8081",
+    "start:cluster": "node src/index.js --puerto=8082 --cluster",
+    "artillery:fork": "artillery quick --count 50 -n 40 http://localhost:8081/prime?max=1000000",
+    "artillery:cluster": "artillery quick --count 50 -n 40 http://localhost:8082/prime?max=1000000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "minimist": "^1.2.5"
+  }
+}
