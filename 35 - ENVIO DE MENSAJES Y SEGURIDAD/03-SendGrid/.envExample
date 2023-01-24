@@ -1,0 +1,5 @@
+PORT=8080
+EMAIL=-------@gmail.com
+PASSWORD=--------
+PORT_GMAIL=465
+SENDGRID_APIKEY=------------
