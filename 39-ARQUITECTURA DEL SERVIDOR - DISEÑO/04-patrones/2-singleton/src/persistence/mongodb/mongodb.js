@@ -2,19 +2,23 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 dotenv.config();
 
-export const initMongoDB = async () => {
-    try {
-        await mongoose.connect(process.env.MONGOURL);
-        console.log('Conectado a Mongo!');
-    } catch (error) {
-        console.log(error);
-    }
-};
 
 export default class MongoDB {
+    static instance;
 
     constructor(collection, schema){
         this.collection = mongoose.model(collection, schema);
+        if(!MongoDB.instance){
+            this.initDB = mongoose.connect(process.env.MONGOURL);
+            MongoDB.instance = this;
+            console.log('Conectado a MongoDB!');
+        } else {
+            return MongoDB.instance;
+        }
+    }
+
+    async initMongoDB(){
+        return this.initDB;
     }
 
     async save(doc) {
