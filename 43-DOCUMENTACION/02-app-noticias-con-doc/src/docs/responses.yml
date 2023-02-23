@@ -1,0 +1,64 @@
+components:
+  schema:
+    News: #TAG
+      New:
+        type: object
+        properties:
+          id:
+            type: string
+            description: Id de la noticia
+          title:
+            type: string
+            description: Titulo de la noticia
+          body:
+            type: string
+            description: Cuerpo de la noticia
+          author:
+            type: string
+            description: Autor de la noticia
+          image:
+            type: string
+            description: Imagen de la noticia
+          date:
+            type: date
+            description: Fecha de publicación de la noticia
+        example:
+          id: f65sd4f56s4df564sdf
+          title: Boca campeón
+          body: fsdfsdfsdjfsdhfkjsdf df sdf sd
+          author:  Gonzalo Almiron
+          image: http://sdfsdfdsf.com
+          date: 22-02-2023
+      getAllNews:
+        type: array
+        items:
+          properties:
+            id:
+              type: string
+              example: 65g4d65g456df4g65df4g56f4
+            title:
+              type: string
+              example: ¡River campeón!
+            body:
+              type: string
+              example: hfkjsdh
+            author:
+              type: string
+              example: Juan Gomez
+            image:
+              type: string
+              example: Imagen de la noticia
+      errorGetById:
+        type: object
+        properties:
+          message:
+            type: string
+            description: No se encontro el id
+        example:
+          message: No se encontró el id 6d5fg465df4g6f4dg5646
+      NotFound:
+        type: string
+        description: error en el servidor
+      deleteById:
+        type: string
+        description: noticia eliminada
