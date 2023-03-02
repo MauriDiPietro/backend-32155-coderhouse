@@ -1,0 +1,8 @@
+<ul>
+    <h1>Products</h1>
+    @each(prod in products)
+        <li>
+            Name: {{prod.name}}| Description: {{prod.description}} | Price: {{prod.price}}
+        </li>
+    @endeach
+</ul>
