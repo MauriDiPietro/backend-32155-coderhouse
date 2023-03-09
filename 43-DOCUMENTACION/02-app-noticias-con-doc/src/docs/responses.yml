@@ -1,6 +1,6 @@
 components:
   schema:
-    News: #TAG
+    News:
       New:
         type: object
         properties:

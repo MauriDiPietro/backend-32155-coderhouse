@@ -5,9 +5,9 @@ const Schema = new mongoose.Schema(
         title: {
             type: String,
             required: true,
-            index: { 
-                unique: true,
-             },
+            // index: { 
+            //     unique: true,
+            //  },
              minlength: [5, 'this title is short'],
             //  maxlength: 10,
             // match: /palabra/,
