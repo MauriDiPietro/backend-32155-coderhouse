@@ -2,7 +2,7 @@
   "$schema": "https://deno.land/x/denon@2.5.0/schema.json",
   "scripts": {
     "start": {
-      "cmd": "denon run --allow-net --allow-read --allow-env app.ts"
+      "cmd": "deno run --allow-net --allow-read --allow-env app.ts"
     }
   }
 }

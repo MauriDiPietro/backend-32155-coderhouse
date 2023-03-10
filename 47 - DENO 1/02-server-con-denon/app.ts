@@ -17,3 +17,4 @@ app.listen(config().PORT);
 console.log(`Server ok on port ${config().PORT}`);
 
 //denon --init --> crea el archivo de scripts
+//denon start
