@@ -18,12 +18,12 @@ export class CarsController {
     }
 
     @Put('/:id')
-        updateCar(@Param('id') carId:string, @Body() car: CreateCarDTO): Promise<CarDocument>{
-            return this.carsService.updateCar(carId, car)
-        }
+    updateCar(@Param('id') carId:string, @Body() car: CreateCarDTO): Promise<CarDocument>{
+       return this.carsService.updateCar(carId, car)
+    }
 
-        @Delete('/:id')
-        deleteCar(@Param('id') carId:string): Promise<void>{
-            return this.carsService.deleteCar(carId)
-        }
+    @Delete('/:id')
+    deleteCar(@Param('id') carId:string): Promise<void>{
+        return this.carsService.deleteCar(carId)
+    }
 }
