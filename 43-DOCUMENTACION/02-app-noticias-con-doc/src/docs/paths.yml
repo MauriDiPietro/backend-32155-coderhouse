@@ -4,7 +4,6 @@ paths:
       tags: 
       - News
       summary: Registro de noticia nueva en base de datos.
-      parameters: 
       requestBody:
         content:
           application/json:
